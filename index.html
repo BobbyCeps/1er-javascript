@@ -7,7 +7,17 @@
   </head>
 <body>
     <script language='javascript'>
-    window.alert('hello world !');
+      var age = window.prompt('Quel age avez-vous ?');
+      var mtrente = 30-age;
+      var ptrente = age-30;
+      if (age < 30) {
+        window.alert('il te manque ' + mtrente + ' ans avant davoir 30 ans' );
+      }
+      if (age >= 30){
+        window.alert('il sest passé ' + ptrente + ' ans depuis tes 30 ans');
+      }
+        window.alert('you have a xo birthday in ' + (10 - (age%10)) + ' years');
+
     </script>
 </body>
 </html>
