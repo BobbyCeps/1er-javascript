@@ -1,23 +1,72 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Javascript</title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-<body>
-    <script language='javascript'>
-      var age = window.prompt('Quel age avez-vous ?');
-      var mtrente = 30-age;
-      var ptrente = age-30;
-      if (age < 30) {
-        window.alert('il te manque ' + mtrente + ' ans avant davoir 30 ans' );
-      }
-      if (age >= 30){
-        window.alert('il sest passé ' + ptrente + ' ans depuis tes 30 ans');
-      }
-        window.alert('you have a xo birthday in ' + (10 - (age%10)) + ' years');
 
-    </script>
+<head>
+   <link type="text/css" rel="stylesheet" href="intro_javascript.css"/>
+
+   <title>
+     Introduction à Javascript
+   </title>
+   <meta charset="utf-8">
+   <meta name="description" content="Intro JS" />
+</head>
+
+<body>
+
+<table>
+      <tr>
+        <th>"Quel est ton nom ?"<th><td id="name"></td>
+      </tr>
+      <tr>
+        <th>"Que viens tu faire ici?"</th><td id="quest"></td>
+      </tr>
+        <tr>
+        <th> "Le monde a besoin de connaitre ta couleur préférée"</th><td id="color"></td>
+      </tr>
+</table>
+<button onclick="javascript:ask(),">Ask me !</button>
+<script language="javascript">
+ var colours = ["#ff0000","#00ff00"];
+ colours.push("#0000ff");
+
+var i = 0;
+while(i<colours.length){
+  window.alert(colours[i]);
+  i++;
+}
+/*
+var name = window.prompt("Quel est ton nom ?");
+  document.getElementById("name").innerHTML= name;
+var quest = window.prompt("Que viens tu faire ici?");
+if (quest=="to seek for the holy grail")
+  { document.getElementById("quest").innerHTML=quest;}
+else
+{  document.getElementById("quest").innerHTML = "<span style=\"color: red;\">"
+  + quest +"</span>";
+  window.alert("Wrong !");
+}
+var color = window.prompt("Le monde a besoin de connaitre ta couleur préférée");
+function insertText(domid,text){
+  document.getElementById(domid).innerHTML=text;
+}
+switch(color){
+    case"blue":
+    insertText("color","<span style=\"color:blue;\">"+color+"</span>");
+    break;
+    case"green":
+    insertText("color","<span style=\"color:green;\">"+color+"</span>");
+    break;
+    case"red":
+    insertText("color","<span style=\"color:red;\">"+color+"</span>");
+    break;
+    default:
+    insertText('color',color);
+    break;
+            }
+*/
+</script>
+
+
 </body>
+
 </html>
