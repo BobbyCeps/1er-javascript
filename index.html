@@ -21,51 +21,34 @@
         <th>"Que viens tu faire ici?"</th><td id="quest"></td>
       </tr>
         <tr>
-        <th> "Le monde a besoin de connaitre ta couleur préférée"</th><td id="color"></td>
+        <th> "Le monde a besoin de connaitre ta couleur préférée"</th><td id="colour"></td>
       </tr>
 </table>
-<button onclick="javascript:ask(),">Ask me !</button>
+<label>Nom:</label><input id="inputName" type="text">
+<label>quest:</label><input id="inputQuest" type="text">
+<label>colour:</label><input id="inputColour" type="text">
+<button onclick="javascript:ask();">Ask me!</button>
 <script language="javascript">
- var colours = ["#ff0000","#00ff00"];
- colours.push("#0000ff");
-
-
- for (var i=0;i<colours.length ;i++){
-   window.alert(colours[i]);
- }
-/*
-var name = window.prompt("Quel est ton nom ?");
-  document.getElementById("name").innerHTML= name;
-var quest = window.prompt("Que viens tu faire ici?");
-if (quest=="to seek for the holy grail")
-  { document.getElementById("quest").innerHTML=quest;}
-else
-{  document.getElementById("quest").innerHTML = "<span style=\"color: red;\">"
-  + quest +"</span>";
-  window.alert("Wrong !");
-}
-var color = window.prompt("Le monde a besoin de connaitre ta couleur préférée");
-function insertText(domid,text){
-  document.getElementById(domid).innerHTML=text;
-}
-switch(color){
-    case"blue":
-    insertText("color","<span style=\"color:blue;\">"+color+"</span>");
-    break;
-    case"green":
-    insertText("color","<span style=\"color:green;\">"+color+"</span>");
-    break;
-    case"red":
-    insertText("color","<span style=\"color:red;\">"+color+"</span>");
-    break;
-    default:
-    insertText('color',color);
-    break;
-            }
-*/
+  function insertText(domId,text,colour="pink"){
+    document.getElementById(domId).style ="color:" + colour;
+    document.getElementById(domId).innerHTML = text;
+  }
+  function ask() {
+    var name = document.getElementById("inputName").value;
+    document.getElementById("name").innerHTML = name;
+    var quest = document.getElementById("inputQuest").value;
+    document.getElementById("quest").innerHTML = quest;
+    var colour = document.getElementById("inputColour").value;
+    switch (colour) {
+      case "blue","green","red":
+          insertText("colour",colour,colour);
+          break;
+     default:
+          insertText("colour",colour);
+          break;
+    }
+  }
 </script>
-
-
 </body>
 
 </html>
