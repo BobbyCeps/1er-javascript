@@ -2,55 +2,32 @@
 <html>
 
 <head>
-   <link type="text/css" rel="stylesheet" href="intro_javascript.css"/>
-
+   <link type="text/css" rel="stylesheet" href="style.css"/>
    <title>
      Introduction à Javascript
    </title>
    <meta charset="utf-8">
-   <meta name="description" content="Intro JS" />
 </head>
-
 <body>
+  <script language="javascript">
+var prenom = ["BULTEZ Jordan","BRUCHET Daniel" , "CAPRON Axel", "CAUVEZ Thimoty",
+              "DELISSE Manon", "DELPIERRE Michel", "FLORE Antoine",
+              "FONTAINE François", "GIACCO Raphael", "GROUX Baptiste",
+              "HURBAIN Jessy", "MACIEJEWSKI Jessica", "MARTINS Julie",
+              "MATEYAK Paul", "MONSERGENT François", "POURRIOT Quentin",
+              "PROVO Kilian", "SCRUFARI Pietro", "TOMCZAK Kévin", "TOURNEUR Tristan",
+              "VERGNE Victor", "VINCENT Simon", "ZAREMBA Victor", "LI Jin Hao"];
+              window.alert(
+                prenom[Math.round(Math.random() * 24)]
+              );
+/*  function mélangeur() {
+              return Math.round(Math.random() * 24);
+              var resultat = mélangeur();
+              window.alert(prenom[resultat]);
+  }*/
 
-<table>
-      <tr>
-        <th>"Quel est ton nom ?"<th><td id="name"></td>
-      </tr>
-      <tr>
-        <th>"Que viens tu faire ici?"</th><td id="quest"></td>
-      </tr>
-        <tr>
-        <th> "Le monde a besoin de connaitre ta couleur préférée"</th><td id="colour"></td>
-      </tr>
-</table>
-<label>Nom:</label><input id="inputName" type="text">
-<label>quest:</label><input id="inputQuest" type="text">
-<label>colour:</label><input id="inputColour" type="text">
-<button onclick="javascript:ask();">Ask me!</button>
-<script language="javascript">
-  function insertText(domId,text,colour="black"){
-    document.getElementById(domId).style ="color:" + colour;
-    document.getElementById(domId).innerHTML = text;
-  }
-  function ask() {
-    var name = document.getElementById("inputName").value;
-    document.getElementById("name").innerHTML = name;
-    var quest = document.getElementById("inputQuest").value;
-    document.getElementById("quest").innerHTML = quest;
-    var colour = document.getElementById("inputColour").value;
-    switch (colour) {
-      case "blue":
-      case "green":
-      case "red":
-          insertText("colour",colour,colour);
-          break;
-     default:
-          insertText("colour",colour);
-          break;
-    }
-  }
-</script>
+
+  </script>
 </body>
 
 </html>
