@@ -3,30 +3,18 @@
 
 <head>
    <link type="text/css" rel="stylesheet" href="style.css"/>
-   <title>
-     Introduction à Javascript
-   </title>
+   <title>Introduction à Javascript</title>
+     <script type="text/javascript" src="script.js"></script>
    <meta charset="utf-8">
 </head>
-<body>
-  <script language="javascript">
-var prenom = ["BULTEZ Jordan","BRUCHET Daniel" , "CAPRON Axel", "CAUVEZ Thimoty",
-              "DELISSE Manon", "DELPIERRE Michel", "FLORE Antoine",
-              "FONTAINE François", "GIACCO Raphael", "GROUX Baptiste",
-              "HURBAIN Jessy", "MACIEJEWSKI Jessica", "MARTINS Julie",
-              "MATEYAK Paul", "MONSERGENT François", "POURRIOT Quentin",
-              "PROVO Kilian", "SCRUFARI Pietro", "TOMCZAK Kévin", "TOURNEUR Tristan",
-              "VERGNE Victor", "VINCENT Simon", "ZAREMBA Victor", "LI Jin Hao"];
-  function mélangeur() {
-              return Math.round(Math.random() * 24);
-  }
-  var resultat = mélangeur();
-  window.alert(prenom[resultat]);
-  /*  window.alert(
-      prenom[Math.round(Math.random() * 24)]
-    );*/
+<body onload="tirage()">
+  <div id="indice"></div>
+  <input id="proposition"></input>
+  <button onclick="essai()">OK</button>
+  <div id="compteur_essais"></div>
+  <div id="record"></div>
 
-  </script>
+
+
 </body>
-
 </html>
